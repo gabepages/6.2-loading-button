@@ -47,6 +47,7 @@ $('.airport').on('click', '.clear-btn',function (e){
    favAirports.add([
      airport.toJSON()
    ]);
+
  });
 
 
@@ -55,8 +56,10 @@ $('.airport').on('click', '.clear-btn',function (e){
 
 
    favAirports.on('add', function(){
-     console.log('in add func',favAirports.toJSON());
+     console.log('in add func',favAirports.last().toJSON()[0]);
+     var currentAP = favAirports.last().toJSON()[0];
+    //cant get it to work without repeating
 
-     //cant get it to work without repeating 
-    //  favAirports.template('#favs', '.favs-content',);
+      favAirports.template('#favs', '.favs-content',currentAP);
+    
     });
