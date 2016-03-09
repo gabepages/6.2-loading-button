@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="header">
-      <div class='search-section'>
-        <h1>Airport Search</h1>
-        <input id='search-area' type="text"  placeholder="JFK">
-        <button class="btn btn-default search-btn" type="submit">Search</button>
-      </div>
-    </div>
     <div class="sidebar">
       <ul class="fav-accordion">
          <li class="favs">Favorites
@@ -21,6 +14,15 @@
 
            </ul>
        </ul>
+    </div>
+    <div class="header">
+      <div class='search-section'>
+        <h1>Airport Search</h1>
+        <div class="search">
+          <input id='search-area' type="text"  placeholder="JFK">
+          <button class="btn btn-default search-btn" type="submit">Search</button>
+        </div>
+      </div>
     </div>
     <div class="airport"></div>
 
@@ -34,11 +36,11 @@
         <li>Visability: <span>{{weather.visibility}}/10</span></li>
         <li>Temp: <span>{{weather.temp}}</span></li>
       </ul>
-      <button class="btn btn-default fav-btn" type="button">Add to Favorites</button>
-      <button class="btn btn-default clear-btn" type="button">Clear</button>
+      <button class="btn btn-default fav-btn airport-props" type="button">Add to Favorites</button>
+      <button class="btn btn-default clear-btn airport-props" type="button">Clear</button>
     </script>
     <script id='favs' type="text/x-handlebars-template">
-        <li>{{IATA}}</li>
+        <li class='fav-iata'>{{IATA}}</li>
     </script>
     <script src="js/bundle.js"></script>
   </body>
