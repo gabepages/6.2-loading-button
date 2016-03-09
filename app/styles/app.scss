@@ -17,7 +17,7 @@ img {
 }
 
 body{
-  background: url('images/bnwterminal.jpg') no-repeat;
+  background: url('../images/bnwterminal.jpg') no-repeat;
   background-size: cover;
   &::before{
     content:'';
