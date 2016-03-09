@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>6.2 loading button</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class='search-section'>
+        <h1>Airport Search</h1>
+        <input id='search-area' type="text"  placeholder="JFK">
+        <button class="btn btn-default search-btn" type="submit">Search</button>
+      </div>
+    </div>
+    <div class="sidebar">
+      <ul class="fav-accordion">
+         <li class="favs">Favorites
+           <ul class="favs-content">
+
+           </ul>
+       </ul>
+    </div>
+    <div class="airport"></div>
+
+
+    <script id="airport" type="text/x-handlebars-template">
+      <ul class='airport-props'>
+        <li>AirPort: <span>{{IATA}}</span></li>
+        <li>Airport Name: <span>{{name}}</span></li>
+        <li>Location: <span>{{city}}, {{state}}</span></li>
+        <li>Weather: <span>{{weather.weather}}</span></li>
+        <li>Visability: <span>{{weather.visibility}}/10</span></li>
+        <li>Temp: <span>{{weather.temp}}</span></li>
+      </ul>
+      <button class="btn btn-default fav-btn" type="button">Add to Favorites</button>
+      <button class="btn btn-default clear-btn" type="button">Clear</button>
+    </script>
+    <script id='favs' type="text/x-handlebars-template">
+        <li>{{IATA}}</li>
+    </script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
